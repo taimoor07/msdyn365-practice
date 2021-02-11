@@ -1,0 +1,187 @@
+{
+    "config": {
+        "enableStockCheck": {
+            "friendlyName": "Enable stock check in app",
+            "description": "Flag to enable ot disable stock check in app",
+            "type": "boolean",
+            "default": false,
+            "group": "Inventory management"
+        },
+        "inventoryLevel": {
+            "friendlyName": "Inventory level based on",
+            "description": "This setting defines how inventory levels are calculated",
+            "type": "string",
+            "enum": {
+                "totalAvailable": "Total available",
+                "physicalAvailable": "Physical available",
+                "inventoryThreshold": "Out of stock threshold"
+            },
+            "default": "inventoryThreshold",
+            "required": true,
+            "group": "Inventory management"
+        },
+        "inventoryRanges": {
+            "friendlyName": "Inventory ranges",
+            "description": "This setting defines displays which inventory ranges are displayed on the site, only applicable if Total Available or Physical Available are selected",
+            "type": "string",
+            "enum": {
+                "all": "All",
+                "lowAndOutofStock": "Low and out of stock",
+                "outOfStock": "Out of stock"
+            },
+            "default": "all",
+            "required": true,
+            "group": "Inventory management"
+        },
+        "outOfStockThreshold": {
+            "friendlyName": "Out of stock threshold",
+            "description": "Active when Inventory Buffer is selected. Threshold to use when determining if a product is out of stock or not -- if its less than or equal to this value, it'll be marked as out of stock",
+            "type": "number",
+            "default": 0,
+            "group": "Inventory management"
+        },
+        "maxQuantityForCartLineItem": {
+            "friendlyName": "Cart line quantity limit",
+            "description": "Limit to the number of copies of an item that can be added to a cart line",
+            "type": "number",
+            "default": 10,
+            "group": "Inventory management"
+        },
+        "hideRating": {
+            "friendlyName": "Hide rating",
+            "description": "This settings hides the rating for products across the site",
+            "type": "boolean",
+            "default": false
+        },
+        "geolocationApiUrl": {
+            "friendlyName": "Geolocation API endpoint",
+            "description": "Geolocation Api endpoint used to retrieve the location information in bopis search",
+            "type": "string",
+            "default": "https://dev.virtualearth.net/REST/v1/"
+        },
+        "reviewTextMaxLength": {
+            "friendlyName": "Review text max length",
+            "description": "Maximum number of characters for the review text",
+            "type": "number",
+            "default": 500
+        },
+        "reviewTitleMaxLength": {
+            "friendlyName": "Review title max length",
+            "description": "Maximum number of characters for the title",
+            "type": "number",
+            "default": 50
+        },
+        "disableTooltip": {
+            "friendlyName": "Disable tooltip flag",
+            "description": "Flag to disable tooltip on items",
+            "type": "boolean",
+            "default": false
+        },
+        "searchQueryStringParameter": {
+            "friendlyName": "Search query string parameter",
+            "description": "Query string parameter for search",
+            "type": "string",
+            "default": "q"
+        },
+        "searchInputMaxLength": {
+            "friendlyName": "Search input max length",
+            "description": "Maximum number of characters for the search input field",
+            "type": "number",
+            "default": 50
+        },
+        "addToCartBehavior": {
+            "friendlyName": "Add product to cart",
+            "description": "This setting defines the experience when a product is added to cart",
+            "type": "string",
+            "enum": {
+                "goToCart": "Navigate to cart page",
+                "showModal": "Show notification",
+                "nothing": "Do not navigate to cart page"
+            },
+            "default": "goToCart"
+        },
+        "giftCardSupported": {
+            "friendlyName": "Supported types of gift card",
+            "description": "This property defines the type of gift card that should be allowed",
+            "type": "string",
+            "enum": {
+                "internal": "Dynamics 365 gift card",
+                "external": "SVS and Givex gift cards",
+                "both": "Dynamics 365, SVS and Givex gift cards"
+            },
+            "default": "internal",
+            "required": true
+        },
+        "breadcrumbType": {
+            "friendlyName": "Breadcrumb display type on PDP",
+            "description": "This setting defines the breadcrumb display on Product page",
+            "type": "string",
+            "enum": {
+                "category": "Show category hierarchy",
+                "categoryAndBack": "Show category hierarchy and back to results ",
+                "back": "Show back to results"
+            },
+            "default": "category",
+            "required": true
+        }
+    },
+    "routes": {
+        "orderDetails": {
+            "friendlyName": "Order details Page Route",
+            "description": "Order details Page Route"
+        },
+        "cart": {
+            "friendlyName": "Cart Page Route",
+            "description": "Cart Page Route"
+        },
+        "checkout": {
+            "friendlyName": "Checkout Page Route",
+            "description": "Checkout Page Route"
+        },
+        "orderConfirmation": {
+            "friendlyName": "Order Confirmation Page Route",
+            "description": "Order Confirmation Page Route"
+        },
+        "home": {
+            "friendlyName": "Home Page Route",
+            "description": "Home Page Route"
+        },
+        "rnrPrivacyPolicy": {
+            "friendlyName": "RNR Privacy Policy",
+            "description": "Privacy Policy for Ratings and Reviews"
+        },
+        "wishlist": {
+            "friendlyName": "Wishlist Page Route",
+            "description": "Wishlist Page Route"
+        },
+        "loyalty": {
+            "friendlyName": "Loyalty Page Route",
+            "description": "Loyalty Page Route"
+        },
+        "loyaltyJoin": {
+            "friendlyName": "Loyalty sign up Page Route",
+            "description": "Loyalty sign up Page Route"
+        },
+        "loyaltyTerms": {
+            "friendlyName": "Loyalty terms page route",
+            "description": "Loyalty terms Page Route"
+        },
+        "search": {
+            "friendlyName": "Search page route",
+            "description": "Search page route"
+        },
+        "ordertemplate": {
+            "friendlyName": "Order template details Page Route",
+            "description": "Order template details Page Route"
+        },
+        "ordertemplatelist": {
+            "friendlyName": "Order template list Page Route",
+            "description": "Order template list Page Route"
+        }
+    },
+    "themes": {
+        "fabrikam": {
+            "friendlyName": "Fabrikam theme"
+        }
+    }
+}
